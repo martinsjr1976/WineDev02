@@ -1,0 +1,72 @@
+<!-- include header -->
+<%-include('include/_header')%>
+    <!-- include header -->
+
+    <!--Main Site-->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex-justify-between">
+                <div class="filter">
+                    <a href="/"><i class="fas fa-angle-double-left"></i> All Wines</a>
+                </div>
+            </div>
+            <div class="form-title text-center">
+                <h2 class="text-dark">Update Wine</h2>
+                <span class="text-light">Use the below form to update a Wine</span>
+            </div>
+
+            <!--update wine form-->
+            <!-- form handling-->
+            <form method="POST" id="update_wine">
+                <div class="new_wine"></div>
+                <div class="form-group">
+                    <label for="name" class="text-light">Name</label>
+                    <input type="hidden" name="id" value="">
+                    <input type="text" name="name" value="" placeholder="Type the wine name here">
+                </div>
+                <div class="form-group">
+                    <label for="type" class="text-light">Type</label>
+                    <div class="radio inline">
+                        <input type="radio" id="radio-2" name="type" value="Red">
+                        <label for="radio-2" class="radio-label">Red</label>
+                    </div>
+                    <div class="radio inline">
+                        <input type="radio" id="radio-3" name="type" value="White">
+                        <label for="radio-3" class="radio-label">White</label>
+                    </div>
+                    <div class="radio inline">
+                        <input type="radio" id="radio-4" name="type" value="Champagne">
+                        <label for="radio-4" class="radio-label">Champagne</label>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label for="year" class="text-light">Year</label>
+                    <input type="text" name="year" value="" placeholder="Type the year here">
+                </div>
+                <div class="form-group">
+                    <label for="country" class="text-light">Country</label>
+                    <input type="text" name="country" value="" placeholder="Type the country here">
+                </div>
+                <div class="form-group">
+                    <label for="region" class="text-light">Region</label>
+                    <input type="text" name="region" value="" placeholder="Type the region here">
+                </div>
+                <div class="form-group">
+                    <label for="price" class="text-light">Price</label>
+                    <input type="text" name="price" value="" placeholder="Type the price here">
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn text">Update</button>
+                </div>
+            </form>
+            <!-- /form handling-->
+        </div>
+    </main>
+
+    <!--/Main Site-->
+
+    <!-- include footer -->
+    <%-include('include/_footer')%>
+        <!-- include footer -->
