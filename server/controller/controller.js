@@ -37,6 +37,7 @@ exports.find = (req, res) => {
     if(req.query.id){
         const id=req.query.id;
 
+        //find wine by ID
         Winedb.findById(id)
             .then(data=>{
                 if(!data){
@@ -49,7 +50,8 @@ exports.find = (req, res) => {
                 res.status(500).send({ message: "An error occurred"})
             })
     } else {
-    Winedb.find()
+        //find all the wine in the collection
+        Winedb.find()
         .then(wine => {
             res.send(wine)
         })

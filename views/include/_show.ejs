@@ -1,11 +1,12 @@
+<% for(var i=0; i<wines.length; i++){%>
 <tr>
-    <td>1</td>
-    <td>Dada</td>
-    <td>Red</td>
-    <td>2019</td>
-    <td>Argentina</td>
-    <td>Fincas</td>
-    <td>11.00</td>
+    <td><%= i+1 %></td>
+    <td><%= wines[i].name %></td>
+    <td><%= wines[i].type %></td>
+    <td><%= wines[i].year %></td>
+    <td><%= wines[i].country %></td>
+    <td><%= wines[i].region %></td>
+    <td><%= wines[i].price %></td>
     <td>
         <a href="/update-wine" class="btn border-shadow update">
             <span class="text-gradient"><i class="fas fa-edit"></i></span>
@@ -15,3 +16,4 @@
         </a>
     </td>
 </tr>
+<% } %>
