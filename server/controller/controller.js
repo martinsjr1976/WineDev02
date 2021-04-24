@@ -33,13 +33,30 @@ exports.create = (req, res) => {
 
 //retrieve and return all wines / single wine
 exports.find = (req, res) => {
+    
+    if(req.query.id){
+        const id=req.query.id;
+
+        Winedb.findById(id)
+            .then(data=>{
+                if(!data){
+                    res.status(404).send({ message: `Cannot find ${id}!`})
+                } else {
+                    res.send(data)
+                }
+            })
+            .catch(err=>{
+                res.status(500).send({ message: "An error occurred"})
+            })
+    } else {
     Winedb.find()
         .then(wine => {
             res.send(wine)
         })
         .catch(err => {
             res.status(500).send({ message: err.message || "An error occurred" })
-        });
+        }); 
+    }
 }
 
 //update wine
