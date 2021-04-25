@@ -5,7 +5,7 @@ exports.homeRoutes = (req,res)=>{
     //get request to /api/wines
     axios.get('http://localhost:3000/api/wines')
         .then(function(response){
-            // console.log(response.data)
+            //console.log(response)
             res.render('index',{wines:response.data});
         })
         .catch(err=>{
