@@ -19,5 +19,10 @@ exports.add_wine = (req,res)=>{
 exports.update_wine = (req,res)=>{
     //passing the id of the selected item to the update page
     axios.get('http://localhost:3000/api/wines', {params:{id:req.query.id}})
-    res.render('update_wine');
+        .then(function(winedata){
+            res.render("update_wine", {wine: winedata.data})
+        })
+    .catch(err=>{
+        res.send(err);
+    })
 }

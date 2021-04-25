@@ -21,8 +21,8 @@
                 <div class="new_wine"></div>
                 <div class="form-group">
                     <label for="name" class="text-light">Name</label>
-                    <input type="hidden" name="id" value="">
-                    <input type="text" name="name" value="" placeholder="Type the wine name here">
+                    <input type="hidden" name="id" value="<%= wine._id %>">
+                    <input type="text" name="name" value="<%= wine.name %>" placeholder="Type the wine name here">
                 </div>
                 <div class="form-group">
                     <label for="type" class="text-light">Type</label>
@@ -42,19 +42,19 @@
                 </div>
                 <div class="form-group">
                     <label for="year" class="text-light">Year</label>
-                    <input type="text" name="year" value="" placeholder="Type the year here">
+                    <input type="text" name="year" value="<%= wine.year %>" placeholder="Type the year here">
                 </div>
                 <div class="form-group">
                     <label for="country" class="text-light">Country</label>
-                    <input type="text" name="country" value="" placeholder="Type the country here">
+                    <input type="text" name="country" value="<%= wine.country %>" placeholder="Type the country here">
                 </div>
                 <div class="form-group">
                     <label for="region" class="text-light">Region</label>
-                    <input type="text" name="region" value="" placeholder="Type the region here">
+                    <input type="text" name="region" value="<%= wine.region %>" placeholder="Type the region here">
                 </div>
                 <div class="form-group">
                     <label for="price" class="text-light">Price</label>
-                    <input type="text" name="price" value="" placeholder="Type the price here">
+                    <input type="text" name="price" value="<%= wine.price %>" placeholder="Type the price here">
                 </div>
 
                 <div class="form-group">
