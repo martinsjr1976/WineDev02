@@ -22,7 +22,9 @@ exports.create = (req, res) => {
     wine
         .save(wine)
         .then(data => {
-            res.send(data)
+            //res.send(data)
+            res.redirect('/add-wine')
+
         })
         .catch(err => {
             res.status(500).send({
