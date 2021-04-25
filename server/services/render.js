@@ -2,17 +2,14 @@
 const axios=require('axios');
 
 exports.homeRoutes = (req,res)=>{
-    //get request to /api/wines
+    //get request to /api/wines and returning all the data from mongoDB
     axios.get('http://localhost:3000/api/wines')
         .then(function(response){
-            //console.log(response)
             res.render('index',{wines:response.data});
         })
         .catch(err=>{
             res.send(err);
         })
-
-    res.render('index',{wines:"New Wine"});
 }
 
 exports.add_wine = (req,res)=>{
@@ -20,5 +17,12 @@ exports.add_wine = (req,res)=>{
 }
 
 exports.update_wine = (req,res)=>{
-    res.render('update_wine');
+    //passing the id of the selected item to the update page
+    axios.get('http://localhost:3000/api/wines', {params:{id:req.query.id}})
+        .then(function(winedata){
+            res.render("update_wine", {wine: winedata.data})
+        })
+    .catch(err=>{
+        res.send(err);
+    })
 }
