@@ -27,15 +27,15 @@
                 <div class="form-group">
                     <label for="type" class="text-light">Type</label>
                     <div class="radio inline">
-                        <input type="radio" id="radio-2" name="type" value="Red">
+                        <input type="radio" id="radio-2" name="type" value="Red"<%= wine.type == 'Red'?'checked':'' %>>
                         <label for="radio-2" class="radio-label">Red</label>
                     </div>
                     <div class="radio inline">
-                        <input type="radio" id="radio-3" name="type" value="White">
+                        <input type="radio" id="radio-3" name="type" value="White"<%= wine.type == 'White'?'checked':'' %>>
                         <label for="radio-3" class="radio-label">White</label>
                     </div>
                     <div class="radio inline">
-                        <input type="radio" id="radio-4" name="type" value="Champagne">
+                        <input type="radio" id="radio-4" name="type" value="Champagne"<%= wine.type == 'Champagne'?'checked':'' %>>
                         <label for="radio-4" class="radio-label">Champagne</label>
                     </div>
 
