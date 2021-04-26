@@ -16,6 +16,8 @@ const PORT=process.env.PORT || 3000
 
 //log requests
 app.use(morgan('tiny'));
+
+//secutiry
 app.use(cors());
 app.use(compression());
 app.use(helmet());
