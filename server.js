@@ -4,6 +4,9 @@ const morgan=require('morgan');
 const bodyparser=require("body-parser");
 const path=require('path');
 const connectDB = require('./server/database/connection');
+const cors = require('cors');
+const compression = require('compression');
+const helmet = require('helmet');
 require("dotenv").config();
 
 const app=express();
@@ -13,6 +16,9 @@ const PORT=process.env.PORT || 3000
 
 //log requests
 app.use(morgan('tiny'));
+app.use(cors());
+app.use(compression());
+app.use(helmet());
 
 //mongodb connection
 connectDB();
