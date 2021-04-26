@@ -1,7 +1,7 @@
 {
   "name": "wine_app",
   "version": "1.0.0",
-  "description": "crud app with expresse and mongodb",
+  "description": "crud app with express and mongodb",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,7 @@
     "crud",
     "mongodb"
   ],
-  "author": "edwards 2018245",
+  "author": "edwards jr 2018245",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
